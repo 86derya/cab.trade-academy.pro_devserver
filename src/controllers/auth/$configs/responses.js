@@ -15,11 +15,11 @@ module.exports = {
     response.status(200);
     response.json({ status: "success", configs });
   },
-  configsFail: function(response, reason = "No access to configs") {
+  configsFail: function(response, error = "config not found") {
     // response.status(400);
     response.json({
-      status: "failed",
-      reason: reason
+      operation_status: "failed",
+      error: error
     });
   },
   idSerchSuccess: function(response, foundId) {

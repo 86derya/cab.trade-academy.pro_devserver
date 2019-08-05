@@ -9,7 +9,11 @@ const cabconfigs = (request, response) => {
   axios.defaults.headers.common.Authorization = `${token}`;
   axios
     .get(configUrl)
-    .then(res => configsSuccess(response, res.data))
+    .then(res =>
+      res.data.operation_status === "succeed"
+        ? configsSuccess(response, res.data.data)
+        : configsFail(response)
+    )
     .catch(err => configsFail(response, err.message));
 };
 // var settings = {
