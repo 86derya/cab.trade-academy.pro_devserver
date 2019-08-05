@@ -15,7 +15,7 @@ module.exports = {
   },
   configsSuccess: function(response, configs) {
     response.status(200);
-    response.json({ status: "success", configs: configs });
+    response.json({ status: "success", configs });
   },
   configsFail: function(response, reason = "No access to configs") {
     // response.status(400);

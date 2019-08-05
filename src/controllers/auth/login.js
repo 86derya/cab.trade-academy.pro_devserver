@@ -1,7 +1,7 @@
 const axios = require("axios");
 const prodLoginUrl = "https://cab-ru.tramplin-uspeha.ru/api/v1/auth/login";
 const devServerLoginURL =
-  "https://cabTradeAcademyProDevServer.herokuapp.com/cab/auth/login";
+  "https://cab-trade-devserver.herokuapp.com.herokuapp.com/cab/auth/login";
 
 const {
   authenticationFailed,
