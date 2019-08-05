@@ -11,7 +11,7 @@ const cabconfigs = (request, response) => {
     .get(configUrl)
     .then(res =>
       res.data.operation_status === "succeed"
-        ? configsSuccess(response, res.data.data)
+        ? configsSuccess(response, res.data)
         : configsFail(response)
     )
     .catch(err => configsFail(response, err.message));
