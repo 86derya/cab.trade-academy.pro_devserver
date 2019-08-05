@@ -11,9 +11,9 @@ module.exports = {
       token: null
     });
   },
-  configsSuccess: function(response, configs) {
+  configsSuccess: function(response, data) {
     response.status(200);
-    response.json({ status: "success", configs });
+    response.json({ status: "success", data });
   },
   configsFail: function(response, error = "config not found") {
     // response.status(400);
