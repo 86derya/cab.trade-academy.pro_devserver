@@ -11,27 +11,10 @@ const cabconfigs = (request, response) => {
     .get(configUrl)
     .then(res =>
       res.data.operation_status === "succeed"
-        ? configsSuccess(response, res.data.data)
+        ? configsSuccess(response, res)
         : configsFail(response)
     )
     .catch(err => configsFail(response, err.message));
 };
-// var settings = {
-//   async: true,
-//   crossDomain: true,
-//   url: "https://cab-ru.tramplin-uspeha.ru/api/v1/auth/login",
-//   method: "GET",
-//   headers: {
-//     "Cache-Control": "no-cache"
-//   },
-//   processData: false,
-//   data: { login: login, password: password }
-// };
-// // delete axios.defaults.headers.common['authorization'];
-// // axios.defaults.headers.common.Authorization = null;
-
-// return axios(settings).then(resp =>
-//   authenticationSuccess(response, resp.data)
-// );
 
 module.exports = cabconfigs;
