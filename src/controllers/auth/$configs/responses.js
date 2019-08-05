@@ -1,9 +1,7 @@
 module.exports = {
   authenticationSuccess: function(response, data) {
     response.status(200);
-    response.json({
-      data
-    });
+    response.json(data);
   },
   authenticationFailed: function(response, message = "Authentication Failed") {
     response.status(400);
